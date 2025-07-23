@@ -1,0 +1,14 @@
+.container .col-md-6 h1 {
+    font-family: "Arbeit", Sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+@media (max-width: 767.98px) {
+
+    .row .col-md-3,
+    .row .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+}

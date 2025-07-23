@@ -1,0 +1,84 @@
+.welcome-section {
+    background: linear-gradient(135deg, #1d2de4, #009fe3);
+    color: white;
+    padding: 60px 20px;
+    border-bottom-left-radius: 100px 60px;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.welcome-section::before {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: 0;
+}
+
+.form-container {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    text-align: center;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+}
+
+.form-container input::placeholder {
+    color: #aaa;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background: #205CBE;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+.form-container button:hover {
+    opacity: 0.9;
+}
+
+.form-container .signUp-link a {
+    color: #1d2de4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+@media (max-width: 991px) {
+    .form-container{
+        width: 80% !important;
+        margin: auto;
+        margin-bottom: 3rem;
+    }
+
+}

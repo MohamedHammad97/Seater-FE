@@ -1,0 +1,318 @@
+<div class="welcome-section">
+    <div class="my-4 text-center">
+        <h1 class="mb-3 fs-1">Seater | Registration Form for 2025-2026</h1>
+        <p class="fs-3">Please fill your details below </p>
+    </div>
+</div>
+
+
+
+<div class="mx-auto form-container my-5">
+    <div *ngIf="apiError" class="alert alert-danger">
+        {{apiError}}
+    </div>
+
+    <form [formGroup]="registerDetailsForm" (ngSubmit)="registeration(registerDetailsForm)">
+        <!-- Name -->
+        <div class="form-group">
+            <input type="text" id="name" formControlName="name" placeholder="Name">
+
+            <div *ngIf="registerDetailsForm.get('name')?.errors && (registerDetailsForm.get('name')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('name')?.getError('required')" class="mb-0">Name is Reguired</p>
+                <p *ngIf="registerDetailsForm.get('name')?.getError('minlength')" class="mb-0">Name minLength is 3</p>
+                <p *ngIf="registerDetailsForm.get('name')?.getError('maxlength')" class="mb-0">Name maxLength is 8</p>
+            </div>
+        </div>
+
+        <!-- First Phone Number -->
+        <div class="form-group">
+            <input type="tel" id="phone" formControlName="phone" placeholder="Phone">
+
+            <div *ngIf="registerDetailsForm.get('phone')?.errors && (registerDetailsForm.get('phone')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('phone')?.getError('required')" class="mb-0">Phone is Reguired</p>
+                <p *ngIf="registerDetailsForm.get('phone')?.getError('minlength')" class="mb-0">Phone minLength is 10</p>
+                <p *ngIf="registerDetailsForm.get('phone')?.getError('maxlength')" class="mb-0">Phone maxLength is 12</p>
+            </div>
+        </div>
+
+        <!-- Second Phone Number -->
+        <div class="form-group">
+            <input type="tel" id="phone2" formControlName="phone2" placeholder="Another phone number">
+
+            <div *ngIf="registerDetailsForm.get('phone2')?.errors && (registerDetailsForm.get('phone2')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('phone2')?.getError('required')" class="mb-0">Phone is Reguired</p>
+                <p *ngIf="registerDetailsForm.get('phone2')?.getError('minlength')" class="mb-0">Phone minLength is 10</p>
+                <p *ngIf="registerDetailsForm.get('phone2')?.getError('maxlength')" class="mb-0">Phone maxLength is 12</p>
+            </div>
+        </div>
+
+        <!-- City -->
+        <div class="form-group text-start my-3">
+            <p class="my-2 fs-5 fw-semibold">Choose Your City</p>
+            <div *ngIf="registerDetailsForm.get('city')?.errors && (registerDetailsForm.get('city')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('city')?.getError('required')" class="mb-0">City is Reguired</p>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="cairo" name="alex" formControlName="city" value="cairo" />
+                <label class="form-check-label" for="cairo">Cairo</label>
+                
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="alex"  name="alex" formControlName="city" value="alex" />
+                <label class="form-check-label" for="alex">Alexandria</label>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+            <input type="text" id="address" formControlName="address" placeholder="Enter your address" />
+                <div *ngIf="registerDetailsForm.get('address')?.errors && (registerDetailsForm.get('address')?.touched || isNotValidForm)"
+                    class="alert alert-danger">
+                    <p *ngIf="registerDetailsForm.get('address')?.getError('required')" class="mb-0">address is Reguired</p>
+                    <p *ngIf="registerDetailsForm.get('address')?.getError('minlength')" class="mb-0">address minLength is 3</p>
+                    <p *ngIf="registerDetailsForm.get('address')?.getError('maxlength')" class="mb-0">address maxLength is 100</p>
+                </div>
+        </div>
+
+        <!-- School Name -->
+        <div class="form-group">
+            <input id="schoolName" formControlName="schoolName" type="text" placeholder="Enter your school Name"/>
+            <div *ngIf="registerDetailsForm.get('schoolName')?.errors && (registerDetailsForm.get('schoolName')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('schoolName')?.getError('required')" class="mb-0">school Name is Reguired</p>
+                <p *ngIf="registerDetailsForm.get('schoolName')?.getError('minlength')" class="mb-0">school Name minLength is 3</p>
+                <p *ngIf="registerDetailsForm.get('schoolName')?.getError('maxlength')" class="mb-0">school Name maxLength is 100</p>
+            </div>
+        </div>
+
+        <!-- School Location -->
+        <div class="form-group">
+            <input id="schoolLocation" formControlName="schoolLocation" type="text" placeholder="Enter your school Location"/>
+            <div *ngIf="registerDetailsForm.get('schoolLocation')?.errors && (registerDetailsForm.get('schoolLocation')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('schoolLocation')?.getError('required')" class="mb-0">school Location is Reguired</p>
+                <p *ngIf="registerDetailsForm.get('schoolLocation')?.getError('minlength')" class="mb-0">school Location minLength is 3</p>
+                <p *ngIf="registerDetailsForm.get('schoolLocation')?.getError('maxlength')" class="mb-0">school Location maxLength is 100</p>
+            </div>
+        </div>
+
+        <!-- Number of Students -->
+        <div class="form-group">
+            <input id="students" formControlName="students" type="tel" placeholder="Enter your Number of students"/>
+            <div *ngIf="registerDetailsForm.get('students')?.errors && (registerDetailsForm.get('students')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('students')?.getError('required')" class="mb-0">Students Number is Reguired</p>
+                <p *ngIf="registerDetailsForm.get('students')?.getError('minlength')" class="mb-0">Students Number minLength is 1</p>
+                <p *ngIf="registerDetailsForm.get('students')?.getError('maxlength')" class="mb-0">Students Number maxLength is 16</p>
+            </div>
+        </div>
+
+        <!-- Educational Department -->
+        <div class="form-group text-start my-5">
+                <p class="fw-semibold my-3 fs-5">Educational Department</p>
+                    <div *ngIf="registerDetailsForm.get('educationalSection')?.errors && (registerDetailsForm.get('educationalSection')?.touched || isNotValidForm)"
+                        class="alert alert-danger">
+                        <p *ngIf="registerDetailsForm.get('educationalSection')?.getError('required')" class="mb-0">Educational Department is Reguired</p>
+                    </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="national" name="educationalSection" formControlName="educationalSection" value="national" />
+                    <label class="form-check-label" for="national">National</label>
+                </div>
+            
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="igsec" name="educationalSection" formControlName="educationalSection" value="igsec"/>
+                    <label class="form-check-label" for="igsec">IGSEC</label>
+                </div>
+            
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="american" name="educationalSection" formControlName="educationalSection" value="american" />
+                    <label class="form-check-label" for="american">American diploma</label>
+                </div>
+        </div>
+
+        <!-- Educational Stage -->
+        <div class="form-group text-start">
+            <p class="fw-semibold my-3 fs-5">Educational Stage</p>
+                <div *ngIf="registerDetailsForm.get('educationalStage')?.errors && (registerDetailsForm.get('educationalStage')?.touched || isNotValidForm)"
+                    class="alert alert-danger">
+                    <p *ngIf="registerDetailsForm.get('educationalStage')?.getError('required')" class="mb-0">Educational
+                        Stage is Reguired</p>
+                </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="KG" name="educationalStage" formControlName="educationalStage" value="KG" />
+                <label class="form-check-label" for="KG">KG</label>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="Junior" name="educationalStage" formControlName="educationalStage" value="Junior"/>
+                <label class="form-check-label" for="Junior">Junior</label>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="Middle" name="educationalStage" formControlName="educationalStage" value="Middle"/>
+                <label class="form-check-label" for="Middle">Middle</label>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="Senior" name="educationalStage" formControlName="educationalStage" value="Senior"/>
+                <label class="form-check-label" for="Senior">Senior</label>
+            </div>
+        </div>
+
+        <!-- Car Type -->
+        <div class="form-group text-start my-3">
+            <p class="my-2 fs-5 fw-semibold">Car Type</p>
+                <div *ngIf="registerDetailsForm.get('carType')?.errors && (registerDetailsForm.get('carType')?.touched || isNotValidForm)"
+                    class="alert alert-danger">
+                    <p *ngIf="registerDetailsForm.get('carType')?.getError('required')" class="mb-0">Car Typeis Reguired</p>
+                </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="AirConditioned" name="AirConditioned" value="AirConditioned" formControlName="carType" />
+                <label class="form-check-label" for="AirConditioned">Air Conditioned</label>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="noAirConditioned" name="noAirConditioned" value="noAirConditioned" formControlName="carType"  />
+                <label class="form-check-label" for="noAirConditioned">No Air Conditioned</label>
+            </div>
+        </div>
+
+        <!-- Subscribed Before -->
+        <div class="form-group text-start my-3">
+            <p class="my-2 fs-5 fw-semibold">Have you subscribed with the company before in previous years?</p>
+                <div *ngIf="registerDetailsForm.get('subscribedBefore')?.errors && (registerDetailsForm.get('subscribedBefore')?.touched || isNotValidForm)"
+                    class="alert alert-danger">
+                    <p *ngIf="registerDetailsForm.get('subscribedBefore')?.getError('required')" class="mb-0">This Field is  Reguired</p>
+                </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="yes" name="yes" value="yes" formControlName="subscribedBefore"/>
+                <label class="form-check-label" for="yes">Yes</label>
+            </div>
+        
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="no" name="no" value="no" formControlName="subscribedBefore" />
+                <label class="form-check-label" for="no">No</label>
+            </div>
+        </div>
+
+        <div class="form-group text-start my-3">
+            <p class="my-2 fs-5 fw-semibold">Comments</p>
+            <p>We welcome any comments or suggestions from you.</p>
+            <input type="text" id="comment" formControlName="comment" placeholder="write your Comment">
+            <div *ngIf="registerDetailsForm.get('comment')?.errors && (registerDetailsForm.get('comment')?.touched || isNotValidForm)"
+                class="alert alert-danger">
+                <p *ngIf="registerDetailsForm.get('comment')?.getError('minlength')" class="mb-0">Students Number minLength is 5</p>
+                <p *ngIf="registerDetailsForm.get('comment')?.getError('maxlength')" class="mb-0">Students Number maxLength is 100</p>
+            </div>
+        </div>
+
+        <button type="submit">
+            <i *ngIf="isLoading" class="fa fa-spinner fa-spin"></i>
+            <span *ngIf="!isLoading">Submit</span>
+        </button>
+    </form>
+
+
+    <!-- <form [formGroup]="googleForm" (ngSubmit)="onSubmit()">
+
+        Name Field
+        <div>
+            <input id="name" formControlName="name" type="text" placeholder="Enter your name" class="form-control" />
+            <div *ngIf="googleForm.get('name')?.invalid && googleForm.get('name')?.touched" class="error">
+                Name is required.
+            </div>
+        </div>
+
+        Phone Field
+        <div>
+            <input id="Phone" type="tel" placeholder="Enter your Phone Number" class="form-control" />
+            <div *ngIf="googleForm.get('phone')?.invalid && googleForm.get('phone')?.touched" class="error">
+                Phone is required.
+            </div>
+        </div>
+
+        Second Phone Number Field
+        <div>
+            <input id="Phone2" type="tel" placeholder="Enter your Phone Number" class="form-control" />
+            <div *ngIf="googleForm.get('phone2')?.invalid && googleForm.get('phone2')?.touched" class="error">
+                Phone is required.
+            </div>
+        </div>
+
+        City Buttons (Choice)
+        <div>
+            <label>Choose Your City:</label>
+            <div>
+                <input type="radio" id="cairo" value="cairo" />
+                <label for="cairo">Cairo</label>
+            </div>
+            <div>
+                <input type="radio" id="alex" value="alex" />
+                <label for="alex">Alexandria</label>
+            </div>
+            <div *ngIf="googleForm.get('choice')?.invalid && googleForm.get('choice')?.touched" class="error">
+                Please select an option.
+            </div>
+        </div>
+
+        Address 
+        <div>
+            <input id="address" formControlName="address" type="text" placeholder="Enter your address" class="form-control" />
+            <div *ngIf="googleForm.get('name')?.invalid && googleForm.get('name')?.touched" class="error">
+                address is required.
+            </div>
+        </div>
+
+        location of address
+        <div>
+            <input id="location" type="text" placeholder="Enter your location of address" class="form-control" />
+            <div *ngIf="googleForm.get('name')?.invalid && googleForm.get('name')?.touched" class="error">
+                location of address is required.
+            </div>
+        </div>
+
+        School Name
+        <div>
+            <input id="schoolName" type="text" placeholder="Enter your school Name" class="form-control" />
+            <div *ngIf="googleForm.get('name')?.invalid && googleForm.get('name')?.touched" class="error">
+                school Name is required.
+            </div>
+        </div>
+
+        School Location
+        <div>
+            <input id="schoolLocation" type="text" placeholder="Enter your school Location" class="form-control" />
+            <div *ngIf="googleForm.get('name')?.invalid && googleForm.get('name')?.touched" class="error">
+                school Location is required.
+            </div>
+        </div>
+
+        Number
+        <div>
+            <input id="peoples" type="tel" placeholder="Enter your Number of peoples" class="form-control" />
+            <div *ngIf="googleForm.get('phone')?.invalid && googleForm.get('phone')?.touched" class="error">
+                Number of peoples is required.
+            </div>
+        </div>
+
+        Checkbox (Agree)
+        <div>
+            <input type="checkbox" formControlName="agree" />
+            <label for="agree">I agree to the terms and conditions</label>
+            <div *ngIf="googleForm.get('agree')?.invalid && googleForm.get('agree')?.touched" class="error">
+                You must agree to continue.
+            </div>
+        </div>
+
+        Submit Button
+        <button type="submit" [disabled]="googleForm.invalid">Submit</button>
+    </form> -->
+</div>

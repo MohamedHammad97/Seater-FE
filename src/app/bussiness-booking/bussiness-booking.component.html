@@ -1,0 +1,30 @@
+<div class="container w-50 ">
+
+    <select [(ngModel)]="selectedCompanyId" (change)="onCompanyChange()">
+        <option value="" disabled selected>Select Company </option>
+        <option *ngFor="let company of allComanies" [value]="company._id">{{ company.name }}</option>
+    </select>
+
+    <select [(ngModel)]="selectedLineId" (change)="onLineChange()" [disabled]="!lines.length">
+        <option value="">Select Line </option>
+        <option *ngFor="let line of lines" [value]="line._id">>{{ line.name}}</option>
+    </select>
+
+    <select [(ngModel)]="selectedPickupId" [disabled]="!pickups.length">
+        <option value="">Select PickUp Point</option>
+        <option *ngFor="let pickup of pickups" [value]="pickup._id">>{{ pickup.name}}</option>
+    </select>
+
+
+    <div class="d-flex justify-content-between px-md-5">
+        <div class="p-special">
+            <p-calendar [(ngModel)]="date" placeholder="Choose your Date" />
+        </div>
+        <div>
+            <p-calendar inputId="calendar-timeonly" [(ngModel)]="time" [timeOnly]="true"
+                placeholder="select Your Time" />
+        </div>
+    </div>
+
+    <button class="btn btn-primary rounded-4" (click)="onBookTrip()">Confirm</button>
+</div>

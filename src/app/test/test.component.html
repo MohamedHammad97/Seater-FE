@@ -1,0 +1,89 @@
+<!-- <div class="row">
+    <div class="col-md-4 bg-black">
+        <div class="d-flex">
+            <button class="btn btn-primary">users</button>
+        </div>
+    </div>
+</div> -->
+
+<div class="min-h-screen bg-gray-50 flex">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md p-4">
+        <h1 class="text-xl font-bold mb-6">Dashboard</h1>
+        <nav class="space-y-2">
+            <a class="block text-gray-700 hover:text-indigo-500" href="#">Products</a>
+            <a class="block text-gray-700 hover:text-indigo-500" href="#">Orders</a>
+            <a class="block text-gray-700 hover:text-indigo-500" href="#">Customers</a>
+            <a class="block text-gray-700 hover:text-indigo-500" href="#">Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="flex-1 p-6">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold">Overview</h2>
+            <div class="flex items-center space-x-2">
+                <span class="font-medium">John Doe</span>
+                <img src="https://i.pravatar.cc/40" class="w-10 h-10 rounded-full" alt="User Avatar">
+            </div>
+        </div>
+
+        <!-- KPIs -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div *ngFor="let kpi of kpis" class="bg-white p-4 rounded-xl shadow">
+                <h3 class="text-sm text-gray-500">{{ kpi.label }}</h3>
+                <div class="text-xl font-bold">{{ kpi.value }}</div>
+                <div *ngIf="kpi.change" class="text-sm" [class.text-green-500]="kpi.change.startsWith('+')"
+                    [class.text-red-500]="kpi.change.startsWith('-')">
+                    {{ kpi.change }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Sales & Orders -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <!-- Sales Chart Placeholder -->
+            <div class="bg-white p-4 rounded-xl shadow">
+                <h3 class="font-semibold mb-2">Sales Report</h3>
+                <div class="h-40 bg-gray-100 rounded flex items-center justify-center text-gray-400">[Chart]</div>
+            </div>
+
+            <!-- Recent Orders -->
+            <div class="bg-white p-4 rounded-xl shadow">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-semibold">Recent Orders</h3>
+                    <a href="#" class="text-indigo-500 text-sm">View All</a>
+                </div>
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-gray-500">
+                            <th class="text-left">Customer</th>
+                            <th class="text-left">Date</th>
+                            <th class="text-right">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let order of recentOrders" class="border-t">
+                            <td>{{ order.name }}</td>
+                            <td>{{ order.date }}</td>
+                            <td class="text-right">{{ order.amount }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Top Products -->
+        <div class="bg-white p-4 rounded-xl shadow">
+            <h3 class="font-semibold mb-2">Top Products</h3>
+            <ul class="divide-y text-sm">
+                <li *ngFor="let product of topProducts" class="flex justify-between py-2">
+                    <span>{{ product.name }}</span>
+                    <span class="font-medium">{{ product.sold }}</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+</div>
+  

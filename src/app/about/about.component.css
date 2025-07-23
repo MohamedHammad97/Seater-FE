@@ -1,0 +1,22 @@
+.container .specialHover i {
+    transition: all 0.3s;
+}
+
+.container .specialHover i:hover {
+    color: var(--main-color) !important
+}
+
+
+@media (max-width: 768px) {
+    .container{
+        text-align: center;
+    }
+        .container .specialHover  {
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+    .container h2 {
+        margin-top: 1.5rem;
+    }
+
+}

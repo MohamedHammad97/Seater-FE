@@ -1,0 +1,64 @@
+.layer {
+    /* background: linear-gradient(to right,#6688f8,#0925d6); */
+    background: rgba(0, 0, 0, 0.8);
+    color:white;
+    /* padding: 3rem; */
+    /* color: white; */
+}
+
+h3 {
+    color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .layer {
+        margin:2rem 1rem !important;
+        text-align: center;
+    }
+    .layer .services-content .cairo{
+        margin-bottom: 2rem !important;
+    }
+        .layer .services-content  p span {
+            margin-left: 1rem !important;
+            text-align: center;
+        }
+}
+
+/* form {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: #f4f4f4;
+    transition: all 0.5s;
+}
+
+.col-md-4:hover .icon {
+    background-color: var(--main-color);
+}
+
+.col-md-4:hover i {
+    color: white;
+}
+
+form textarea {
+    resize: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.button a:hover {
+    background-color: var(--main-color) !important;
+}
+
+.button a {
+    transition: all 0.3s ease;
+} */

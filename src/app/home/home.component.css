@@ -1,0 +1,26 @@
+.bg-home {
+    background-image: url(../../assets/2.jfif);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .bg-home .container .row .col-md-6 p {
+        font-size: medium !important;
+    }
+
+    .bg-home .container .buttons {
+        display: block !important;
+
+    }
+    .bg-home .container .buttons .btn1 {
+        margin-bottom: 1rem;
+        padding: 0.5rem 2.2rem !important;
+    }
+
+    #whySeater .container .row .col-md-3{
+        margin-bottom: 2rem;
+    }
+}

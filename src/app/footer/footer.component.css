@@ -1,0 +1,39 @@
+:host{
+    margin-top: auto;
+}
+.container .specialHover i{
+    transition: all 0.3s;
+}
+.container .specialHover i:hover {
+    color: var(--main-color) !important
+}
+
+@media (min-width: 992px) {
+
+    .container .app {
+        display: flex ;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .container {
+        text-align: center;
+    }
+    .container .app h4 {
+        margin-bottom: 2rem;
+    }
+    .container .app {
+        margin-bottom: 2rem;
+    }
+    
+
+    .container .specialHover{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
