@@ -16,7 +16,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
  @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
    ngAfterViewInit() {
       const options = {
-        strings: [' Studens', ' Corperate', ' Family'],
+        strings: [' Students', ' Corperate', ' Family'],
         typeSpeed: 100,
         backSpeed: 50,
         loop: true,
@@ -29,23 +29,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       this.typed.destroy();
     }
   
-  // customOptions: OwlOptions = {
-  //   loop: true,
-  //   mouseDrag: true,
-  //   touchDrag: false,
-  //   pullDrag: false,
-  //   dots: false,
-  //   margin: 20,
-  //   navSpeed: 700,
-  //   navText: ['', ''],
-  //   responsive: {
-  //     0: {
-  //       items: 2
-  //     }
-  //   },
-  //   nav: true
-  // }
-
   customOptions: OwlOptions = {
     loop: true,
     autoplay:true,
@@ -54,7 +37,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     pullDrag: false,
     dots: false,
     nav: false,
-    autoplayTimeout:1500,
+    autoplayTimeout:2000,
     responsive: {
       0: {
         items: 1

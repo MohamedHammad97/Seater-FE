@@ -5,16 +5,19 @@
     color: white;
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .bg-home .container .row .col-md-6 p {
         font-size: medium !important;
     }
 
     .bg-home .container .buttons {
         display: block !important;
-
     }
+
+}
+
+@media (max-width: 768px) {
+
     .bg-home .container .buttons .btn1 {
         margin-bottom: 1rem;
         padding: 0.5rem 2.2rem !important;

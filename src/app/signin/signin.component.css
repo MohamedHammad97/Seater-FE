@@ -87,3 +87,11 @@
     font-weight: bold;
     text-decoration: none;
 }
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 80% !important;
+    }
+
+}

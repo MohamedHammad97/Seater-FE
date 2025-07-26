@@ -8,13 +8,15 @@
 
 
 @media (max-width: 768px) {
-    .container{
+    .container {
         text-align: center;
     }
-        .container .specialHover  {
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
+
+    .container .specialHover {
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
     .container h2 {
         margin-top: 1.5rem;
     }

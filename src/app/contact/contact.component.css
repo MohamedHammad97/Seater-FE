@@ -1,7 +1,7 @@
 .layer {
     /* background: linear-gradient(to right,#6688f8,#0925d6); */
     background: rgba(0, 0, 0, 0.8);
-    color:white;
+    color: white;
     /* padding: 3rem; */
     /* color: white; */
 }
@@ -12,16 +12,23 @@ h3 {
 
 @media (max-width: 768px) {
     .layer {
-        margin:2rem 1rem !important;
+        margin: 2rem 1rem !important;
         text-align: center;
     }
-    .layer .services-content .cairo{
+
+    .layer .services-content .cairo {
         margin-bottom: 2rem !important;
     }
-        .layer .services-content  p span {
-            margin-left: 1rem !important;
-            text-align: center;
-        }
+
+    .layer .services-content .col-md-6 div {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .layer .services-content p span {
+        margin-left: 1.5rem !important;
+        text-align: center;
+    }
 }
 
 /* form {
