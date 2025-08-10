@@ -9,29 +9,35 @@ li button:hover {
     border: var(--main-color);
 } */
 
+
+
 .navbar {
-    transition: background-color, box-shadow 0.5s ease;
+    /* transition: background-color, box-shadow 0.5s ease; */
     background-color: transparent;
 }
 
+
 .navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show ,.navbar.scrolled .navbar-nav .nav-link.active{
-    color: var(--main-color) !important;
+.navbar-nav .nav-link.show,
+.navbar.scrolled .navbar-nav .nav-link.active {
+    /* color: var(--main-color) !important; */
+
     font-weight: bolder;
 }
 
-.navbar.scrolled {
-    backdrop-filter: blur(12px);
-    box-shadow: 0px 4px 20px -17px rgba(0, 0, 0, 1);
-}
 
-.navbar.scrolled ul li a ,.navbar.scrolled ul li{
+
+/* .navbar.scrolled ul li a ,.navbar.scrolled ul li{
     color: black !important;
+} */
+
+.navbar.scrolled ul {
+    background-color: transparent !important;
 }
 
-.navbar.scrolled button {
+/* .navbar.scrolled button {
     border-color: black !important;
-}
+} */
 
 .nav-link:focus-visible {
     box-shadow: none;
@@ -39,17 +45,13 @@ li button:hover {
 
 @media (max-width: 768px) {
     .custom-collapse {
-        backdrop-filter: blur(12px);
-            box-shadow: 0px 4px 20px -17px rgba(0, 0, 0, 1);
+        /* backdrop-filter: blur(12px);
+        box-shadow: 0px 4px 20px -17px rgba(0, 0, 0, 1); */
+        background-color: #4679ab;
         padding: 1rem 0;
         border-radius: 2rem;
         margin-top: 1rem;
     }
-
-            /* .navbar.scrolled nav{
-            backdrop-filter: none;
-                box-shadow: none;
-        } */
 
     ul li {
         margin-bottom: 0.5rem;
@@ -63,8 +65,33 @@ li button:hover {
         width: 80%;
         margin-left: 10%;
     }
+
+        .navbar.scrolled {
+            background-color: #4679ab;
+            transition: all 0.5s ;
+        }
 }
 
-/* 
-.navbar-nav {
-    align-items: center; } */
+@media (min-width: 768px) {
+    .nav-links li {
+        position: relative;
+    }
+
+    .nav-links li:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 18px;
+        border-left: 1px solid #ccc;
+    }
+
+    .navbar.scrolled {
+        /* backdrop-filter: blur(12px);
+        box-shadow: 0px 4px 20px -17px rgba(0, 0, 0, 1); */
+        /* background: linear-gradient(135deg, #7ac9f9, #1a2dd1); */
+        background: linear-gradient(135deg, #5fb4f4, #0b1fa9);
+
+    }
+}

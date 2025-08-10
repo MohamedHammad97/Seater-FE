@@ -35,6 +35,7 @@ import { ServicesBookingComponent } from './services-booking/services-booking.co
 import { TestComponent } from './test/test.component';
 import { SchoolBookingComponent } from './school-booking/school-booking.component';
 import { CommingsoonComponent } from './commingsoon/commingsoon.component';
+import { AboutHomeComponent } from './about-home/about-home.component';
 
 
 
@@ -63,6 +64,7 @@ import { CommingsoonComponent } from './commingsoon/commingsoon.component';
     TestComponent,
     SchoolBookingComponent,
     CommingsoonComponent,
+    AboutHomeComponent,
   ],
   imports: [
     BrowserModule,

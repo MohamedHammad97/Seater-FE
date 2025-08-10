@@ -1,11 +1,3 @@
-/* .container .specialHover i {
-    transition: all 0.3s;
-}
-
-.container .specialHover i:hover {
-    color: var(--main-color) !important
-} */
-
 .container .specialHover i {
     color: #1877f2;
 }

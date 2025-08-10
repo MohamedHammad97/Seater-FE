@@ -1,53 +1,56 @@
 <nav [class.scrolled]="isScrolled" class="navbar navbar-expand-md fixed-top ">
     <div class="container">
         <a class="navbar-brand" routerLink="/">
-            <img src="assets/qt=q_95.jfif" class="w-100" alt="">
+            <img src="assets/qt=q_95.jfif" class="w-100 " alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse custom-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto text-center ">
-                <li class="nav-item ">
-                    <a class="nav-link text-white fw-bold" aria-current="page" routerLink="home" routerLinkActive="active"
+            <ul class="navbar-nav mx-auto text-center bg-nav rounded-5 px-2 nav-links">
+                <li class="nav-item" >
+                    <a class="nav-link text-white" aria-current="page" routerLink="home" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">Home</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link text-white fw-bold" routerLink="/service" routerLinkActive="active"
+                    <a class="nav-link text-white " routerLink="/service" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" routerLink="/contact" routerLinkActive="active"
+                    <a class="nav-link text-white " routerLink="/contact" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">Contact</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" routerLink="/about" routerLinkActive="active"
+                    <a class="nav-link text-white " routerLink="/about" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-bold" routerLink="/school" routerLinkActive="active"
+                    <a class="nav-link text-white" routerLink="/school" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: true }">school</a>
                 </li>
             </ul>
 
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 icons">
-                <li class="navbar-nav d-flex align-items-center text-white">
+                <li class="navbar-nav d-flex align-items-center">
+                    <a href="https://www.facebook.com/SeaterApp/" target="_blank"><i class="fab mx-2 fa-facebook fs-4 text-white"></i></a>
+                    <a href="https://www.instagram.com/seaterapp" target="_blank"><i class="fab mx-2 fa-instagram fs-4 text-white"></i></a>
+                    <a href="https://www.linkedin.com/company/seater" target="_blank"><i class="fab mx-2 fa-linkedin fs-4 text-white"></i></a>
+                    <!-- <i class="fab mx-2 fa-facebook fs-5"></i>
                     <i class="fab mx-2 fa-instagram fs-5"></i>
-                    <i class="fab mx-2 fa-facebook fs-5"></i>
-                    <i class="fab mx-2 fa-linkedin fs-5"></i>
+                    <i class="fab mx-2 fa-linkedin fs-5"></i> -->
                 </li>
 
                 <li class="navbar-nav mx-lg-2" *ngIf="!isLoggedIn">
-                    <button class="btn border-white py-0 rounded-5"><a
+                    <button class="btn border-white py-0 rounded-pill"><a
                             class="nav-link cursor-pointer fw-bolder text-white" routerLink="/signUp">Sign Up
                         </a></button>
                 </li>
 
                 <li class="navbar-nav " *ngIf="!isLoggedIn">
-                    <button class="btn  border-white py-0 rounded-5"><a
-                            class="nav-link cursor-pointer fw-bolder text-white" routerLink="/signIn">login</a></button>
+                    <button class="btn  border-white py-0 rounded-pill"><a
+                            class="nav-link cursor-pointer fw-bolder text-white" routerLink="/signIn">Login</a></button>
 
                 </li>
 
@@ -55,7 +58,7 @@
                     <button class="btn border-white py-0 rounded-5"> <a
                             class="nav-link cursor-pointer fw-bolder text-white">logOut</a></button>
                 </li>
-                
+
             </ul>
         </div>
     </div>

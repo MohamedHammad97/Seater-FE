@@ -5,6 +5,11 @@
     color: white;
 }
 
+/* button {
+    background-color: rgba(114, 114, 230, 0.5);
+    
+} */
+
 @media (max-width: 576px) {
     .bg-home .container .row .col-md-6 p {
         font-size: medium !important;

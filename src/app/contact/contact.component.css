@@ -6,6 +6,11 @@
     /* color: white; */
 }
 
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
 h3 {
     color: var(--main-color);
 }
@@ -26,7 +31,7 @@ h3 {
     }
 
     .layer .services-content p span {
-        margin-left: 1.5rem !important;
+        margin-left: 1rem !important;
         text-align: center;
     }
 }
